@@ -1,0 +1,21 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cape Town Taxi Icon -->
+  <rect width="128" height="128" fill="#87CEEB"/>
+  
+  <!-- Taxi body -->
+  <rect x="24" y="50" width="80" height="40" fill="#FFD700" stroke="#000" stroke-width="2"/>
+  
+  <!-- Windshield -->
+  <rect x="28" y="54" width="72" height="20" fill="#87CEEB" stroke="#000" stroke-width="1"/>
+  
+  <!-- Racing stripes -->
+  <rect x="28" y="58" width="72" height="4" fill="#FF0000"/>
+  <rect x="28" y="66" width="72" height="4" fill="#00FF00"/>
+  
+  <!-- Wheels -->
+  <circle cx="36" cy="94" r="8" fill="#000"/>
+  <circle cx="92" cy="94" r="8" fill="#000"/>
+  
+  <!-- Cape Town text -->
+  <text x="64" y="110" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#000">CAPE TOWN</text>
+</svg>

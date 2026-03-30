@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv86w4xvh7h6v"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_5c7y3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d8y4"]
+size = Vector2(60, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2b5x3"]
+size = Vector2(40, 20)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_5c7y3")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1024.0
+offset_bottom = 600.0
+color = Color(0.529412, 0.807843, 0.921569, 1)
+
+[node name="Road" type="ColorRect" parent="."]
+offset_left = 312.0
+offset_right = 712.0
+offset_bottom = 600.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="LaneLines" type="Node2D" parent="."]
+
+[node name="Line1" type="ColorRect" parent="LaneLines"]
+offset_left = 445.0
+offset_right = 449.0
+offset_bottom = 600.0
+color = Color(1, 1, 0, 1)
+
+[node name="Line2" type="ColorRect" parent="LaneLines"]
+offset_left = 579.0
+offset_right = 583.0
+offset_bottom = 600.0
+color = Color(1, 1, 0, 1)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(512, 450)
+
+[node name="Sprite" type="ColorRect" parent="Player"]
+offset_left = -30.0
+offset_top = -15.0
+offset_right = 30.0
+offset_bottom = 15.0
+color = Color(1, 0.843137, 0, 1)
+
+[node name="TaxiStripes" type="Node2D" parent="Player/Sprite"]
+
+[node name="RedStripe" type="ColorRect" parent="Player/Sprite/TaxiStripes"]
+offset_left = -25.0
+offset_top = -8.0
+offset_right = 25.0
+offset_bottom = -3.0
+color = Color(1, 0, 0, 1)
+
+[node name="GreenStripe" type="ColorRect" parent="Player/Sprite/TaxiStripes"]
+offset_left = -25.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 8.0
+color = Color(0, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_1d8y4")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Score" type="Label" parent="UI"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Score: 0"
+
+[node name="Destination" type="Label" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Next Stop: Bellville"
+horizontal_alignment = 2
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Passengers" type="Node2D" parent="."]
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
