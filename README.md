@@ -24,17 +24,49 @@
 - **Mobile-ready** for iOS/Android export
 - **MCP Plugin** compatible for AI-assisted development
 
-## 🚀 How to Run
+## 🚀 Quick Start (2 minutes to play!)
 
-1. **Install Godot 4.4+** from https://godotengine.org
-2. **Open Project**: File → Open Project → Select this folder
-3. **Enable MCP Plugin** (optional): Project → Project Settings → Plugins → Enable "Godot MCP"
-4. **Run Game**: Press F5 or click Play button
+### Step 1: Get Godot
+1. **Download Godot 4.4+** from https://godotengine.org/download (it's free!)
+2. **Extract and run** the Godot executable (no installation needed)
 
-## 🎯 Controls
+### Step 2: Clone and Play
+```bash
+git clone https://github.com/krappie-code/cape-town-taxi-runner-godot.git
+cd cape-town-taxi-runner-godot
+```
 
+### Step 3: Open in Godot
+1. **Launch Godot**
+2. **Click "Import"** 
+3. **Browse to this folder** and select `project.godot`
+4. **Click "Import & Edit"**
+5. **Press F5** or click the ▶️ Play button
+6. **Start collecting passengers!** 🚐💨
+
+### Alternative: Direct Download
+- **Download ZIP** from GitHub
+- **Extract** the files  
+- **Open in Godot** as above
+
+## 🎯 Controls & Gameplay
+
+### Controls
 - **Arrow Keys / A,D**: Switch lanes left/right
 - **Spacebar**: Jump over obstacles
+
+### How to Play
+- **Collect passengers** 👥 for 100 points each
+- **Avoid obstacles** 🚧 (potholes, roadwork, traffic, speed bumps)
+- **Jump over** obstacles you can't avoid
+- **Survive as long as possible** - speed increases over time!
+- **Reach destinations** like Bellville, Wynberg, Khayelitsha
+
+### Pro Tips
+- **Time your jumps** - you can't change lanes while airborne
+- **Look ahead** - obstacles spawn in different patterns
+- **Collect passengers** in risky lanes for higher scores
+- **Different obstacles** require different strategies (jump vs. dodge)
 
 ## 📱 Mobile Export
 
